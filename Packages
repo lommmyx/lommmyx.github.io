@@ -1,0 +1,73 @@
+Package: com.exile90.icleanerpro
+Architecture: iphoneos-arm64
+Version: 7.10.0
+Section: Utilities
+Maintainer: Ivano Bilenchi <support@ib-soft.net>
+Depends: firmware (>= 4.0), findutils, apt | apt7
+Filename: ./debs/com.exile90.icleanerpro_7.10.0_iphoneos-arm64.deb
+Size: 1282302
+MD5sum: d044e30deac16a7bc2af369964d7065a
+SHA1: c05f2b5845aa8d5395952b5f5e478ea3b95dc584
+SHA256: 6b1738709658decc0e7946d51a6a3670e1cd6b3001a05d706e45bb3e27b8d3f8
+SHA512: a13cfd12c81590a432b1ee7f97050174780ff5fa192833c6ce521198929867719ef209da77b713b5ca49ad6b2624dc4c0e4fcf0e564f97b18d443b6d07bd00e8
+Description: The first real iOS system cleanup and management utility
+Name: iCleaner Pro
+Author: Ivano Bilenchi <support@ib-soft.net>
+Icon: https://raw.githubusercontent.com/ichitaso/file/refs/heads/main/images/Icons/iCleaner.png
+
+Package: com.exile90.icleanerpro
+Architecture: iphoneos-arm64e
+Version: 7.10.0
+Section: Utilities
+Maintainer: Ivano Bilenchi <support@ib-soft.net>
+Pre-Depends: rootless-compat(>= 0.9)
+Depends: firmware (>= 4.0), findutils, apt | apt7
+Filename: ./debs/com.exile90.icleanerpro_7.10.0_iphoneos-arm64e.deb
+Size: 1271174
+MD5sum: 1637c82c1f5fae61e4233b770dd4ed7b
+SHA1: f53a906d2da2192ffc67d1aa0c94dd657278210b
+SHA256: 7e02c28b09292c614d625c694e8b7a93cee49bf00fb231a97e16a29dba779efb
+SHA512: 251b82f09313951ba054ff9919f9cb187852cbd530ad3e3f8e1207d629db6ade4cb6b16b4ff837df3c4fe8661580c67d8495c075de91ef6e0f7a4a8eacf55bf1
+Description: The first real iOS system cleanup and management utility
+Name: iCleaner Pro
+Author: Ivano Bilenchi <support@ib-soft.net>
+Icon: https://raw.githubusercontent.com/ichitaso/file/refs/heads/main/images/Icons/iCleaner.png
+
+Package: com.netskao.filzacrack
+Architecture: iphoneos-arm64
+Version: 1.1-8
+Section: Netskao-Tweaks
+Maintainer: Nets
+Installed-Size: 88
+Depends: firmware (>= 15.0), mobilesubstrate, com.tigisoftware.filza64bit
+Filename: ./debs/com.netskao.filzacrack_1.1-8_iphoneos-arm64.deb
+Size: 5008
+MD5sum: 84206ae230eca314b5cd17631dde31d7
+SHA1: d32e3558005d642d8acebdbd9b093b07ed1b58bf
+SHA256: d3b6afaac25ecdd5fdd2c68d8b4e841a6adbe446b8588cf74cc0a050dacc0847
+SHA512: ef74c8222cc7ec0b424beda07f76b7a948552a9a32bac291ace9e890028117745e89768887df22ad76ece89b2c83b76dbdf678b82bc00a692282791ebb04d3f9
+Homepage: https://tigisoftware.com/cydia/
+Description: Filza unlock full functionality, the main program please install in the official source
+Name: Filza Crack
+Author: Netskao
+SileoDepiction: https://jailrepo.initnil.com/Depictions/com.netskao.filzacrack.json
+
+Package: com.netskao.filzacrack
+Architecture: iphoneos-arm64e
+Version: 1.1-8
+Section: Netskao-Tweaks
+Maintainer: Nets
+Installed-Size: 88
+Depends: firmware (>= 15.0), mobilesubstrate, com.tigisoftware.filza64bit
+Filename: ./debs/com.netskao.filzacrack_1.1-8_iphoneos-arm64e.deb
+Size: 4980
+MD5sum: 5c86c8846ab2409e32eb41bb04c0849f
+SHA1: 22b9144919080992e5a4939fceaf20e93dce7c7e
+SHA256: 5be7c1fe5ef057c46d2a7b92629ad7762b8bcd32f357854a815ad9f00a8fc683
+SHA512: 0184b59f3cd2dd76b8a72c7aef2b5d77d68e42c061a9b9bb09fd25a01158c2797869fa256a0c7865b95d68ea767eb9453e44bce3ebacf7f962081480a9e2a01c
+Homepage: https://tigisoftware.com/cydia/
+Description: Filza unlock full functionality, the main program please install in the official source
+Name: Filza Crack
+Author: Netskao
+SileoDepiction: https://jailrepo.initnil.com/Depictions/com.netskao.filzacrack.json
+
