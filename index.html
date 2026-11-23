@@ -1,0 +1,295 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#0b0c0f">
+  <meta name="description" content="I'm lommmyx, an iOS developer and the creator of FontTweak.">
+  <link rel="canonical" href="https://lommmyx.github.io/">
+  <link rel="icon" href="avatar.jpg" type="image/jpeg">
+  <title>lommmyx | iOS Developer</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --canvas: #0b0c0f;
+      --surface: #15171d;
+      --text: #f5f5f7;
+      --muted: #b1b5bf;
+      --line: #30333c;
+      --accent: #8bc2ff;
+      --button: #0068cf;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-synthesis: none;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: var(--canvas);
+      color: var(--text);
+      font-size: 1rem;
+      line-height: 1.55;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    h1, h2, h3, p, figure { margin: 0; }
+    a { color: inherit; text-decoration: none; }
+    a:focus-visible { outline: 2px solid var(--accent); outline-offset: 5px; }
+
+    .shell {
+      width: min(67.5rem, calc(100% - clamp(2.5rem, 9vw, 8rem)));
+      margin-inline: auto;
+    }
+
+    .skip-link {
+      position: absolute;
+      z-index: 1;
+      inset: .75rem auto auto .75rem;
+      padding: .5rem .8rem;
+      border-radius: .35rem;
+      background: var(--text);
+      color: var(--canvas);
+      transform: translateY(-200%);
+    }
+
+    .skip-link:focus { transform: none; }
+    .site-header { border-bottom: 1px solid var(--line); }
+
+    .header-content,
+    .footer-content,
+    .nav-links,
+    .project-actions {
+      display: flex;
+      align-items: center;
+    }
+
+    .header-content,
+    .footer-content {
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .header-content { min-height: 4rem; }
+    .brand { font-size: 1.05rem; font-weight: 700; letter-spacing: -.025em; }
+
+    .nav-links { gap: clamp(1rem, 3vw, 2rem); }
+
+    .nav-links a,
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      min-height: 2.75rem;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      font-size: .9375rem;
+      font-weight: 500;
+    }
+
+    .nav-links a:hover { color: var(--text); }
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      align-items: center;
+      gap: clamp(2rem, 8vw, 6rem);
+      padding: clamp(4rem, 8vw, 6.75rem) clamp(0rem, 3vw, 2.5rem) clamp(4rem, 8vw, 6.25rem) 0;
+    }
+
+    .hero h1 {
+      font-size: clamp(3.5rem, 9vw, 7.75rem);
+      font-weight: 700;
+      letter-spacing: -.075em;
+      line-height: .96;
+    }
+
+    .hero p {
+      margin-block-start: 1.2rem;
+      color: var(--muted);
+      font-size: clamp(1.3rem, 2.6vw, 1.9rem);
+      line-height: 1.2;
+      letter-spacing: -.025em;
+    }
+
+    .portrait {
+      display: block;
+      inline-size: clamp(9rem, 23vw, 14rem);
+      block-size: auto;
+      border: 1px solid #313c50;
+      border-radius: 30%;
+      background: #0d1728;
+    }
+
+    .section-heading {
+      margin-block-end: 1.15rem;
+      font-size: clamp(1.75rem, 4vw, 2.5rem);
+      line-height: 1.1;
+      font-weight: 650;
+      letter-spacing: -.04em;
+    }
+
+    .project {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      min-block-size: 18.5rem;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 1.7rem;
+      background: var(--surface);
+    }
+
+    .project-copy {
+      display: grid;
+      align-content: center;
+      padding: clamp(1.4rem, 5vw, 3.75rem);
+    }
+
+    .project h3 {
+      font-size: clamp(2.35rem, 5.2vw, 4.3rem);
+      font-weight: 700;
+      line-height: 1;
+      letter-spacing: -.065em;
+    }
+
+    .project p {
+      max-inline-size: 29ch;
+      margin-block: .85rem 1.45rem;
+      color: var(--muted);
+      font-size: 1.0625rem;
+      text-wrap: pretty;
+    }
+
+    .project-actions { flex-wrap: wrap; gap: .45rem 1.2rem; }
+
+    .project-actions a {
+      display: inline-flex;
+      align-items: center;
+      min-height: 2.75rem;
+      border-radius: 100rem;
+      font-size: .9375rem;
+      font-weight: 600;
+    }
+
+    .download {
+      padding-inline: 1.1rem;
+      background: var(--button);
+      color: #fff;
+    }
+
+    .download:hover { background: #075ab2; }
+    .source { color: var(--accent); }
+    .source:hover { text-decoration: underline; text-underline-offset: .2em; }
+
+    .specimen {
+      position: relative;
+      isolation: isolate;
+      display: grid;
+      min-block-size: 15rem;
+      place-items: center;
+      overflow: hidden;
+      background: radial-gradient(ellipse at 72% 4%, #203e69, #101e35 60%, #111925);
+    }
+
+    .specimen::before {
+      position: absolute;
+      z-index: -1;
+      inset: 24% 11% 26%;
+      border-block: 1px solid #809aca40;
+      content: "";
+    }
+
+    .specimen span {
+      color: #d8e6ff;
+      font-family: Baskerville, "Times New Roman", serif;
+      font-size: clamp(8.5rem, 16vw, 13.5rem);
+      line-height: .8;
+      letter-spacing: -.105em;
+      padding-inline-end: .1em;
+      transform: translateY(-.04em);
+    }
+
+    .site-footer {
+      margin-block-start: clamp(3.5rem, 8vw, 6rem);
+      border-top: 1px solid var(--line);
+    }
+
+    .footer-content {
+      min-height: 5.5rem;
+      color: var(--muted);
+    }
+
+    .footer-content p { font-size: .9375rem; }
+
+    @media (max-width: 42rem) {
+      .hero {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding-block: 3.2rem 3.5rem;
+        padding-inline-end: 0;
+      }
+
+      .portrait { grid-row: 1; inline-size: 7.5rem; }
+      .hero p { margin-block-start: .7rem; }
+      .project { grid-template-columns: 1fr; }
+      .project-copy { padding-block: 1.85rem; }
+      .specimen { min-block-size: 11.5rem; }
+    }
+
+    @media (forced-colors: active) {
+      .project { border-color: CanvasText; }
+      .download { border: 1px solid LinkText; }
+    }
+  </style>
+</head>
+<body id="top">
+  <a class="skip-link" href="#content">Skip to content</a>
+
+  <header class="site-header">
+    <nav class="shell header-content" aria-label="Main navigation">
+      <a class="brand" href="#top">lommmyx</a>
+      <div class="nav-links">
+        <a href="#projects">Projects</a>
+        <a href="#socials">Socials</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="content">
+    <section class="hero shell" aria-labelledby="name">
+      <div>
+        <h1 id="name">lommmyx</h1>
+        <p>iOS Developer</p>
+      </div>
+      <img class="portrait" src="avatar.jpg" width="256" height="256" alt="lommmyx's GitHub avatar" fetchpriority="high">
+    </section>
+
+    <section class="shell" id="projects" aria-labelledby="projects-title">
+      <h2 class="section-heading" id="projects-title">Projects</h2>
+      <article class="project" aria-labelledby="fonttweak-title">
+        <div class="project-copy">
+          <h3 id="fonttweak-title">FontTweak</h3>
+          <p>Customize fonts in iOS apps. Built for arm64 on iOS 16&ndash;26.</p>
+          <div class="project-actions">
+            <a class="download" href="https://github.com/lommmyx/FontTweak/releases/download/v1.0.0/FontTweak.dylib">Download dylib</a>
+            <a class="source" href="https://github.com/lommmyx/FontTweak">View source on GitHub</a>
+          </div>
+        </div>
+        <figure class="specimen" aria-hidden="true"><span>Aa</span></figure>
+      </article>
+    </section>
+  </main>
+
+  <footer class="shell site-footer" id="socials">
+    <div class="footer-content">
+      <p>Find me online</p>
+      <nav class="nav-links" aria-label="Social profiles">
+        <a href="https://github.com/lommmyx">GitHub</a>
+        <a href="https://x.com/lommmyx">X</a>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>
