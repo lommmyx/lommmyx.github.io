@@ -141,6 +141,8 @@
       background: var(--surface);
     }
 
+    .project + .project { margin-block-start: 1rem; }
+
     .project-copy {
       display: grid;
       align-content: center;
@@ -211,6 +213,28 @@
       transform: translateY(-.04em);
     }
 
+    .specimen-ltr {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: clamp(.8rem, 2vw, 1.5rem);
+      background: radial-gradient(ellipse at 72% 4%, #23584c, #15372f 60%, #11231f);
+    }
+
+    .specimen-ltr::before { border-color: #a0cbb84d; }
+
+    .specimen-ltr span {
+      color: #d6f4e9;
+      font-family: Tahoma, Arial, sans-serif;
+      font-size: clamp(6rem, 12vw, 9rem);
+      letter-spacing: normal;
+      padding: 0;
+      transform: none;
+    }
+
+    .specimen-ltr [lang="ar"] { transform: translateY(-.18em); }
+    .specimen-ltr .layout-arrow { font-size: clamp(3rem, 6vw, 4.5rem); }
+
     .site-footer {
       margin-block-start: clamp(3.5rem, 8vw, 6rem);
       border-top: 1px solid var(--line);
@@ -278,6 +302,20 @@
           </div>
         </div>
         <figure class="specimen" aria-hidden="true"><span>Aa</span></figure>
+      </article>
+      <article class="project" id="arabic-ltr" aria-labelledby="arabic-ltr-title">
+        <div class="project-copy">
+          <h3 id="arabic-ltr-title">Arabic LTR System Hook</h3>
+          <p>Use a left-to-right layout in selected Android apps while keeping your device language. Requires root and Vector 2.2.</p>
+          <div class="project-actions">
+            <a class="download" href="https://github.com/lommmyx/ArabicLTR-SystemHook/releases/download/v0.5.0/ArabicLTR-SystemHook-v0.5.0.apk">Download APK</a>
+            <a class="source" href="https://github.com/lommmyx/ArabicLTR-SystemHook">View source on GitHub</a>
+          </div>
+        </div>
+        <figure class="specimen specimen-ltr" aria-hidden="true">
+          <span lang="ar" dir="rtl">ع</span>
+          <span class="layout-arrow">&rarr;</span>
+        </figure>
       </article>
     </section>
   </main>
