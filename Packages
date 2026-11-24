@@ -71,3 +71,38 @@ Name: Filza Crack
 Author: Netskao
 SileoDepiction: https://jailrepo.initnil.com/Depictions/com.netskao.filzacrack.json
 
+Package: com.spyg.watusi
+Architecture: iphoneos-arm64
+Version: 0.0.1
+Section: Tweaks
+Maintainer: Spy_G
+Depends: firmware (>= 15.1), ellekit, com.fouadraheb.watusi (= 1.0.2)
+Conflicts: local.wsso.startupvalidation
+Replaces: local.wsso.startupvalidation
+Filename: ./debs/com.spyg.watusi_0.0.1_iphoneos-arm64.deb
+Size: 9520
+MD5sum: 89bb2f078b0ea3ce1164a3d5fcec2812
+SHA1: e59e2b53866415da433151c9dc2a04cc6a4e898f
+SHA256: 5be85fb6f3ff063e9a86d95e70258e8b038a0724457db67f8003e333d22973ca
+SHA512: bc98581bce31bc9876d09214e8d948afd7a6674798ef595eb5e5186b712a5c39b4171121b9a357cf24f2666f89c5b8de3574efa657f492091d9c0bfb2d7f7000
+Name: watusi unlocker
+Author: Spy_G
+
+Package: com.spyg.watusi
+Architecture: iphoneos-arm64e
+Version: 0.0.1
+Section: Tweaks
+Maintainer: Spy_G
+Pre-Depends: rootless-compat(>= 0.9)
+Depends: firmware (>= 15.1), ellekit, com.fouadraheb.watusi (= 1.0.2)
+Conflicts: local.wsso.startupvalidation
+Replaces: local.wsso.startupvalidation
+Filename: ./debs/com.spyg.watusi_0.0.1_iphoneos-arm64e.deb
+Size: 11792
+MD5sum: 99474d80753841719a1801c38c346dbe
+SHA1: cff33f92454ea6bb20adb303a8b49bdfb4498e2b
+SHA256: 18e8b41099978899cebfcff0ba6c13c4c6a61d069ad4c2b566310554664ec784
+SHA512: 1b04c2c58cb16216968f1208accabcf2928830a36eafe4da89f0e5b2f01d4dc82ea69f736ee21e6ec67a46de098d8ee2e3e49f1f751d7b8339d87dc4ebbf350e
+Name: watusi unlocker
+Author: Spy_G
+
